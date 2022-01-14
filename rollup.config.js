@@ -1,4 +1,5 @@
 import resolve from '@rollup/plugin-node-resolve';
+import { babel } from '@rollup/plugin-babel';
 import {terser} from 'rollup-plugin-terser';
 
 export default {
@@ -12,6 +13,7 @@ export default {
 	  },
 	  plugins: [
 		resolve(),
+		babel({ babelHelpers: 'bundled' }),
 		terser({
 			ecma: 2020,
 			module: true,
