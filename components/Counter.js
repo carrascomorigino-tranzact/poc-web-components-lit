@@ -2,7 +2,7 @@ import { LitElement, html, css } from "lit";
 
 export class Counter extends LitElement {
   static properties = {
-    count: { type: Number },
+    count,
   };
 
   static styles = css`

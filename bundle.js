@@ -29,7 +29,7 @@
 
   class Counter extends s {
     static properties = {
-      count: { type: Number },
+      count,
     };
 
     static styles = r$2`
