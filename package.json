@@ -1,8 +1,10 @@
 {
   "name": "@carrascomorigino-tranzact/poc-web-components-lit",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
+  "type": "module",
   "main": "index.js",
+  "module": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c"
@@ -19,6 +21,7 @@
   },
   "homepage": "https://github.com/carrascomorigino-tranzact/poc-web-components-lit#readme",
   "dependencies": {
+    "@rollup/plugin-commonjs": "^21.0.1",
     "lit": "^2.1.1",
     "lit-element": "^3.1.1"
   },
