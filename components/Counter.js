@@ -47,5 +47,3 @@ export class Counter extends LitElement {
     `;
   }
 }
-
-customElements.define("lit-counter", Counter);
