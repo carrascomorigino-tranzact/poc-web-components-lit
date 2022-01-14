@@ -1,5 +1,5 @@
 import resolve from '@rollup/plugin-node-resolve';
-import commonjs from '@rollup/plugin-commonjs';
+import {terser} from 'rollup-plugin-terser';
 
 export default {
 	// If using any exports from a symlinked project, uncomment the following:
@@ -7,11 +7,16 @@ export default {
 	  input: ['components/index.js'],
 	  output: {
 		  file: 'bundle.js',
-		  format: 'iife',
+		  format: 'es',
 		  sourcemap: true
 	  },
 	  plugins: [
 		resolve(),
-		commonjs()
-	  ]
+		terser({
+			ecma: 2020,
+			module: true,
+			warnings: true,
+		  }),
+	  ],
+	  preserveEntrySignatures: 'strict',
   };
